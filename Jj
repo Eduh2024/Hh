@@ -1,0 +1,68 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" collection="false">
+  <variables>
+    <!-- Your existing variables here -->
+  </variables>
+  <block type="before_purchase" id="tOc)]Xd=cAm0aiy+-8(8" x="0" y="615">
+    <statement name="BEFOREPURCHASE_STACK">
+      <block type="notify" id="2%^bZ/o?Qxvoj5rc$8[!">
+        <!-- Your existing code here -->
+        <next>
+          <block type="controls_if" id="/))#3SKXiduHDLO$4LL4">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="Ys,P2iFG=FApiWax]au{">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="last_digit" id="%o2*FF$QG-f@uNK}2p)K"></block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="lfRfTs[t0,blj(@Q95Y|">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="variables_set" id="+(AYk.$Sd166[rs,(60Z">
+                <field name="VAR" id="K[O?$oC@acQqB^+{4rY7" variabletype="">Digit</field>
+                <value name="VALUE">
+                  <block type="math_number" id="T$RXxP-ZIfQs1Ny!{QGl">
+                    <field name="NUM">4</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="controls_if" id="C+wZ_mp}+JM`SY|O,sDa">
+                <value name="IF0">
+                  <block type="logic_compare" id="5`[`29dr2xti8I+aE,Se">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="last_digit" id="htVN3GH/p2|xwN^]{!2-"></block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="H|EbMQvM2oE3pnBpoa?z">
+                        <field name="NUM">7</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="notify" id="4g@k,~Fwq|?IZ+=;{cIV">
+                    <field name="NOTIFICATION_TYPE">WARNING</field>
+                    <value name="MESSAGE">
+                      <block type="text" id="3L=UY80^D=fy/oQ2ROi/">
+                        <field name="TEXT">No purchase made to avoid losses.</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <!-- Your existing blocks here -->
+</xml>
